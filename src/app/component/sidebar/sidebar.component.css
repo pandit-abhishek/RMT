@@ -1,0 +1,20 @@
+.sidebar {
+    display: table;
+    background:-webkit-linear-gradient(-29deg, rgba(33, 114, 45, 0.95) 0, rgba(55, 52, 120, 0.95) 100%);
+    width: 250px;
+    min-height: 611px;
+    float: left;
+}
+.sidebar ul {
+    padding: 5px !important;
+}
+.sidebar ul li {
+    list-style: none;
+    padding: 10px 10px;
+}
+.sidebar ul li a {
+    color: #fff;
+}
+.sidebar .icon-gap {
+    margin-right: 10px;
+}
