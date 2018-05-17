@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
-import { StorageService } from './../shared';
+import { StorageService } from './../_services';
 
 
 @Component({

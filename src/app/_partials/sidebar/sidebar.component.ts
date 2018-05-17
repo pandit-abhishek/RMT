@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { StorageService } from './../../shared';
+import { StorageService } from './../../_services';
 import { Router } from '@angular/router';
+
+import { MenuItem } from './../../config/menu.item'
+
 
 @Component({
   selector: 'app-sidebar',
@@ -9,13 +12,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
+    public menus;
 
     constructor(
         private router: Router,
-        private storageService: StorageService
+        private storageService: StorageService,
+        private menuItems: MenuItem
     ) { }
 
     ngOnInit() {
+        var userRole = this.storageService.getUserRole();
+        this.menus = this.menuItems.menus[userRole];
     }
 
     public onLogOut(){

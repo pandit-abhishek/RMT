@@ -1,0 +1,18 @@
+.dashboard .header h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.dashboard .row {
+    text-align: center;
+}
+
+.dashboard img {
+    border-radius: 10%;
+    height: 200px;
+    width: 200px;
+    
+}
+.dashboard .application-row {
+    margin-bottom: 60px;
+}

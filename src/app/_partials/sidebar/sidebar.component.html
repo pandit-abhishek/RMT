@@ -1,6 +1,6 @@
 <section class="sidebar">
     <ul>
-        <li><a href=""><i class="fa fa-home icon-gap"></i>Home</a></li>
+        <li *ngFor="let menu of menus" ><a href="{{menu.path}}"><i class="fa fa-home icon-gap"></i>{{menu.name}}</a></li>
         <li><a href=""><i class="fa fa-users icon-gap"></i>Admin</a></li>
         <li><a href=""><i class="fa fa-users icon-gap"></i>User</a></li>
         <li><a href=""><i class="fa fa-users icon-gap"></i>Dummy</a></li>

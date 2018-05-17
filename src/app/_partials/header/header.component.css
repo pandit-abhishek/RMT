@@ -1,0 +1,22 @@
+.header {
+    /* background:-webkit-linear-gradient(-29deg, rgba(33, 114, 45, 0.95) 0, rgba(55, 52, 120, 0.95) 100%); */
+    min-height: 60px;
+    background-color: #36424a;
+    
+}
+.header a {
+    float: left;
+    margin-top: 15px;
+    color: #fff;
+}
+
+.header h6 {
+    float: right;
+    margin-top: 15px;
+    color: #fff;
+}
+.header p {
+    float: right;
+    margin-top: 15px;
+    color: #000;
+}
