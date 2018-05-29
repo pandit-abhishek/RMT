@@ -10,14 +10,14 @@ import { StorageService } from './../_services';
     styleUrls: ['./layout.component.css']
 })
 export class LayoutComponent implements OnInit {
-    public isUserLoggedIn : boolean = false ;
+    public isUserLoggedIn: boolean = false;
     constructor(
         private storageService: StorageService
     ) { }
 
     ngOnInit() {
-        if(this.storageService.isLoggedIn()){
-            this.isUserLoggedIn =  true;
+        if (parseInt(this.storageService.isLoggedIn())) {
+            this.isUserLoggedIn = true;
         }
     }
 

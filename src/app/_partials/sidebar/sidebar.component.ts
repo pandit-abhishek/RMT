@@ -27,7 +27,7 @@ export class SidebarComponent implements OnInit {
 
     public onLogOut(){
         this.storageService.clearAll();
-        this.router.navigateByUrl('/login');
+        this.router.navigate(['/login']);
     }
 
 }

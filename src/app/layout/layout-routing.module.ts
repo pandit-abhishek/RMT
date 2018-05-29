@@ -7,23 +7,18 @@ import { AuthGuard } from '../_guards'
 
 const routes: Routes = [
     {
-        path:'',
-        component:LayoutComponent,
-        children:[
+        path: '',
+        component: LayoutComponent,
+        children: [
             {
-                path : '',
-                canActivate:[AuthGuard]
+                path: '',
+                redirectTo: 'dashboard'
             },
             {
-                path : 'dashboard',
-                loadChildren : '../dashboard/dashboard.module#DashboardModule'
+                path: 'dashboard',
+                loadChildren: '../dashboard/dashboard.module#DashboardModule'
             },
-            {
-                path : 'login',
-                loadChildren : '../login/login.module#LoginModule'
-            }
         ]
-        
     }
 
 ];
@@ -31,4 +26,4 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class LayoutRoutingModule {}
+export class LayoutRoutingModule { }
