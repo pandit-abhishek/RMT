@@ -1,7 +1,10 @@
-<app-header *ngIf="isUserLoggedIn"></app-header>
-<app-sidebar *ngIf="isUserLoggedIn"></app-sidebar>
-<section class="main-container">
-    <router-outlet></router-outlet>
-    <div class="clearfix"></div>
-</section>
+<ng-container>
+        <app-header *ngIf="isUserLoggedIn"></app-header>
+        <app-sidebar *ngIf="isUserLoggedIn"></app-sidebar>
+        <section class="main-container">
+            <router-outlet></router-outlet>
+            <div class="clearfix"></div>
+        </section>
+</ng-container>
+
 <!-- <app-footer *ngIf="isUserLoggedIn"></app-footer> -->

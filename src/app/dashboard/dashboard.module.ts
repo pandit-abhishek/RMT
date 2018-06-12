@@ -5,10 +5,10 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    DashboardRoutingModule
-  ],
-  declarations: [DashboardComponent]
+    imports: [
+        CommonModule,
+        DashboardRoutingModule
+    ],
+    declarations: [DashboardComponent]
 })
 export class DashboardModule { }

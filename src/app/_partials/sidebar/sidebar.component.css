@@ -1,10 +1,10 @@
-.sidebar {
+/* .sidebar {
     display: table;
-    /* background:-webkit-linear-gradient(-29deg, rgba(33, 114, 45, 0.95) 0, rgba(55, 52, 120, 0.95) 100%); */
+    background:-webkit-linear-gradient(-29deg, rgba(33, 114, 45, 0.95) 0, rgba(55, 52, 120, 0.95) 100%);
     width: 250px;
-    min-height: 700px;
+    min-height: 800px;
     float: left;
-    /* background-color: #36424a; */
+    background-color: #36424a;
     background-image: url(./../../../assets/image/sidebar.jpg);
 }
 .sidebar ul {
@@ -15,8 +15,45 @@
     padding: 10px 10px;
 }
 .sidebar ul li a {
-    color: #000;
+    color: #FFF;
 }
 .sidebar .icon-gap {
     margin-right: 10px;
+} */
+
+
+.sidebar-container {
+    min-height: 838px;
+    width: 250px;
+    background:-webkit-linear-gradient(-29deg, rgba(33, 114, 45, 0.95) 0, rgba(55, 52, 120, 0.95) 100%);
+    position: relative;
+    float: left;
+}
+.list-item {
+    height: auto !important;
+    line-height: 2.5;
+}
+.list-item a {
+    color: #FFF;
+}
+.list-item label {
+    margin-left: 20px;
+}
+.list-item-child {
+    line-height: 0.5;
+}
+.mat-icon {
+    font-size: 12px;
+    margin-top: 12px;
+}
+.child-menu-close {
+    display: none;
+}
+
+.treeview-angle {
+    float: right;
+}
+
+.child-menu-open {
+    display: block;
 }

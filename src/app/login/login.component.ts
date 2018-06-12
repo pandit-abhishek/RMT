@@ -25,16 +25,21 @@ export class LoginComponent implements OnInit {
     public loginUser(e){
         e.preventDefault();
         var username = e.target.elements[0].value;
-        var password = e.target.elements[1].value;
-        var userData = this.userServices.getUserByUserName(username,password);
-
-        if(userData){
-            this.storageService.setLoginUserDetails(userData);
-            this.router.navigateByUrl('/dashboard');
-            
-        }else {
-            console.log('else');
-        }
+        let users = [];
+        var userData = this.userServices.login(username).subscribe(
+                (res) => {
+                    
+                    if (res.data) {
+                        this.storageService.setLoginUserDetails(res.data);
+                        this.router.navigateByUrl('/dashboard');
+                } else {
+                    // TODO: NO user's in the database so show the flash messages in the page.
+                }
+            },
+            (error: any) => {
+                console.log('this is error from user component getAllUsers call', error);
+            }
+        );
     }
 
     

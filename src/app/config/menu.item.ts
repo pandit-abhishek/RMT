@@ -1,45 +1,393 @@
 export class MenuItem {
     public menus = {
-        'admin' :[
+        'RM-ADMIN' :[
             {
-                'name':'Admin-1',
-                'path':'/dashboard'
+                'name':'Account',
+                'path':'',
+                'icon': 'fa fa-user',
             },
             {
-                'name':'Admin-2',
-                'path':'/dashboard'
+                'name':'Users',
+                'path':'',
+                'icon': 'fa fa-users',
+                'hidden' : false,
+                'children' : [
+                    {
+                        'name' : 'Add',
+                        'path' : 'user/add',
+                    },
+                    {
+                        'name' : 'List',
+                        'path' : 'user'
+                    }
+                ]
             },
             {
-                'name':'Admin-3',
-                'path':'/dashboard'
+                'name':'Applications',
+                'path':'',
+                'icon': 'fa fa-cogs',
+                'children' : [
+                    {
+                        'name' : 'Add',
+                        'path' : 'application/add'
+                    },
+                    {
+                        'name' : 'List',
+                        'path' : 'application/list',
+                    }
+                ]
+            },
+            {
+                'name':'Instances',
+                'path':'',
+                'icon': 'fa fa-server',
+                'children' : [
+                    {
+                        'name' : 'List',
+                        'path' : 'instances',
+                    },
+                    {
+                        'name' : 'Add',
+                        'path' : 'instances/add'
+                    }
+                ]
+            },
+            {
+                'name':'SVN',
+                'path':'',
+                'icon': 'fa fa-key',
+                'children' : [
+                    {
+                        'name' : 'List',
+                        'path' : 'svn',
+                    },
+                    {
+                        'name' : 'Add',
+                        'path' : 'svn/create'
+                    }
+                ]
+            },
+            {
+                'name':'Release',
+                'path':'',
+                'icon': 'fa fa-truck',
+                'children' : [
+                    {
+                        'name' : 'View',
+                        'path' : 'release',
+                    },
+                    {
+                        'name' : 'Add',
+                        'path' : 'release/create'
+                    }
+                ]
             }
         ],
-        'developer' : [
+        'RM-NORMAL' : [
             {
-                'name':'Developer-1',
-                'path':'/dashboard'
+                'name':'Account',
+                'path':'',
+                'icon': 'fa fa-home',
             },
             {
-                'name':'Developer-2',
-                'path':'/dashboard'
+                'name':'Users',
+                'path':'',
+                'icon': 'fa fa-home',
+                'hidden' : false,
+                'children' : [
+                    {
+                        'name' : 'Add',
+                        'path' : 'user/add',
+                    },
+                    {
+                        'name' : 'List',
+                        'path' : 'user'
+                    }
+                ]
             },
             {
-                'name':'Developer-3',
-                'path':'/dashboard'
+                'name':'Applications',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children' : [
+                    {
+                        'name' : 'List',
+                        'path' : 'application',
+                    },
+                    {
+                        'name' : 'Add',
+                        'path' : 'application/add'
+                    }
+                ]
             },
+            {
+                'name':'Instances',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children' : [
+                    {
+                        'name' : 'List',
+                        'path' : 'instances',
+                    },
+                    {
+                        'name' : 'Add',
+                        'path' : 'instances/add'
+                    }
+                ]
+            },
+            {
+                'name':'SVN',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children' : [
+                    {
+                        'name' : 'List',
+                        'path' : 'svn',
+                    },
+                    {
+                        'name' : 'Create',
+                        'path' : 'svn/create'
+                    }
+                ]
+            },
+            {
+                'name':'Release',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children' : [
+                    {
+                        'name' : 'View',
+                        'path' : 'release',
+                    },
+                    {
+                        'name' : 'Create',
+                        'path' : 'release/create'
+                    }
+                ]
+            }
         ],
-        'business':[
+        'DEV-MANAGER' : [
             {
-                'name':'Business-1',
-                'path':'/dashboard'
+                'name':'Account',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children' :  {
+
+                }
             },
             {
-                'name':'Business-2',
-                'path':'/dashboard'
+                'name':'Users',
+                'path':'',
+                'icon': 'fa fa-home',
+                'hidden' : false,
+                'children' : {
+                    'Add' : 'user/add',
+                    'List' : 'user'
+                }
             },
             {
-                'name':'Business-3',
-                'path':'/dashboard'
+                'name':'Applications',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children' : {
+                    'List' : 'application',
+                    'Add'  : 'application/add',
+                }
+            },
+            {
+                'name':'Instances',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children': {
+                    'List' : 'instances',
+                    'Add' : 'instances/add'
+                }
+            },
+            {
+                'name':'SVN',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children': {
+                    'List' : 'svn',
+                    'Create' : 'svn/create'
+                }
+            },
+            {
+                'name':'Release',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children': {
+                    'View' : 'release',
+                    'Create' : 'release/create'
+                }
+            }
+        ],
+        'DEV-NORMAL' : [
+            {
+                'name':'Account',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children' :  {
+
+                }
+            },
+            {
+                'name':'Users',
+                'path':'',
+                'icon': 'fa fa-home',
+                'hidden' : false,
+                'children' : {
+                    'Add' : 'user/add',
+                    'List' : 'user'
+                }
+            },
+            {
+                'name':'Applications',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children' : {
+                    'List' : 'application',
+                    'Add'  : 'application/add',
+                }
+            },
+            {
+                'name':'Instances',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children': {
+                    'List' : 'instances',
+                    'Add' : 'instances/add'
+                }
+            },
+            {
+                'name':'SVN',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children': {
+                    'List' : 'svn',
+                    'Create' : 'svn/create'
+                }
+            },
+            {
+                'name':'Release',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children': {
+                    'View' : 'release',
+                    'Create' : 'release/create'
+                }
+            }
+        ],
+        'BUSINESS-ADMIN':[
+            {
+                'name':'Account',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children' :  {
+
+                }
+            },
+            {
+                'name':'Users',
+                'path':'',
+                'icon': 'fa fa-home',
+                'hidden' : false,
+                'children' : {
+                    'Add' : 'user/add',
+                    'List' : 'user'
+                }
+            },
+            {
+                'name':'Applications',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children' : {
+                    'List' : 'application',
+                    'Add'  : 'application/add',
+                }
+            },
+            {
+                'name':'Instances',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children': {
+                    'List' : 'instances',
+                    'Add' : 'instances/add'
+                }
+            },
+            {
+                'name':'SVN',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children': {
+                    'List' : 'svn',
+                    'Create' : 'svn/create'
+                }
+            },
+            {
+                'name':'Release',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children': {
+                    'View' : 'release',
+                    'Create' : 'release/create'
+                }
+            }
+        ],
+        'BUSINESS-NORMAL':[
+            {
+                'name':'Account',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children' :  {
+
+                }
+            },
+            {
+                'name':'Users',
+                'path':'',
+                'icon': 'fa fa-home',
+                'hidden' : false,
+                'children' : {
+                    'Add' : 'user/add',
+                    'List' : 'user'
+                }
+            },
+            {
+                'name':'Applications',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children' : {
+                    'List' : 'application',
+                    'Add'  : 'application/add',
+                }
+            },
+            {
+                'name':'Instances',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children': {
+                    'List' : 'instances',
+                    'Add' : 'instances/add'
+                }
+            },
+            {
+                'name':'SVN',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children': {
+                    'List' : 'svn',
+                    'Create' : 'svn/create'
+                }
+            },
+            {
+                'name':'Release',
+                'path':'',
+                'icon': 'fa fa-home',
+                'children': {
+                    'View' : 'release',
+                    'Create' : 'release/create'
+                }
             }
         ]
     }; 

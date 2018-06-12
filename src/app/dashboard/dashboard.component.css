@@ -1,3 +1,6 @@
+.dashboard {
+    background-color: #ecf0f5;
+}
 .dashboard .header h2 {
     text-align: center;
     margin-top: 20px;
@@ -8,7 +11,7 @@
 }
 
 .dashboard img {
-    border-radius: 10%;
+    border-radius:50%;
     height: 200px;
     width: 200px;
     

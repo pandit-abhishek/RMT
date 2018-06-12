@@ -1,0 +1,32 @@
+.add-application-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.add-application-container > * {
+    width: 100%;
+}
+
+.mat-form-field {
+    display: block;
+}
+.text-header {
+    margin-top: 50px;
+}
+
+.text-header h2{
+    text-align: center
+}
+
+.submit-button {
+    text-align: center;
+    padding: 35px;
+}
+
+.submit-button button {
+    width: 110px;
+    height: 50px;
+}

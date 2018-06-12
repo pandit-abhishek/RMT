@@ -1,0 +1,60 @@
+<div class="text-header">
+    <h2>Add Application</h2>
+</div>
+<div class="add-application-container">
+    <form role = "form" (submit)="addApplication($event)" [formGroup]="newApplicationForm">
+        <mat-form-field>
+            <input matInput placeholder="Enter Application name" formControlName="applicationName">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <textarea matInput placeholder="Enter Short Description" formControlName="shortDesc"></textarea>
+        </mat-form-field>
+        <mat-form-field>
+            <textarea matInput placeholder="Enter Long Description" formControlName="longDesc"></textarea>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter Application Short name" formControlName="applicationShortName">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter Current Version" formControlName="currentVersion">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter Primary Manager" formControlName="primaryManager">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter Secondary Manager" formControlName="secondaryManager">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter Backup Approver" formControlName="backupApprover">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter COE Lead" formControlName="coeLead">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter IT Dev Director" formControlName="itDevDirector">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter IT Support Director" formControlName="itSupportDirector">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter Bussiness Users" formControlName="bussinessUser">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter Distribution List" formControlName="distributionList">
+        </mat-form-field>
+        <!-- <mat-form-field>
+            <mat-select placeholder="Select" formControlName="option">
+                <mat-option value="1">Option-1</mat-option>
+                <mat-option value="2">Option-2</mat-option>
+                <mat-option value="3">Option-3</mat-option>
+                <mat-option value="4">Option-4</mat-option>
+                <mat-option value="5">Option-5</mat-option>
+            </mat-select>
+        </mat-form-field> -->
+        <div class="submit-button">
+            <button class = "" mat-raised-button>Submit</button>
+        </div>
+       
+    </form>
+</div>

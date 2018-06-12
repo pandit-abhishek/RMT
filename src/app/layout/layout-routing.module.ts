@@ -15,9 +15,13 @@ const routes: Routes = [
                 redirectTo: 'dashboard'
             },
             {
+                path: 'application',
+                loadChildren : '../application/application.module#ApplicationModule'
+            },
+            {
                 path: 'dashboard',
                 loadChildren: '../dashboard/dashboard.module#DashboardModule'
-            },
+            }
         ]
     }
 
