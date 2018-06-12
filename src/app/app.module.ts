@@ -23,6 +23,7 @@ import { AuthGuard } from './_guards'
 
 import { MenuItem } from './config/menu.item';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SidebarComponent } from './_partials/sidebar/sidebar.component';
 
 @NgModule({
     declarations: [
@@ -42,7 +43,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         AuthGuard,
         MenuItem,
         UserServices,
-        ApplicationService
+        ApplicationService,
+        SidebarComponent
     ],
     bootstrap: [AppComponent]
 })

@@ -6,16 +6,16 @@ import { Router } from '@angular/router';
     templateUrl: './dashboard.component.html',
     styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
-
+export class DashboardComponent implements OnInit  {
+    test : string = 'Hello';
+    
     constructor(
         private router: Router,
     ) { }
 
     ngOnInit() {
+        
     }
 
-    public appDetails(): void {
-        this.router.navigate(['/application']);
-    }
+    
 }
