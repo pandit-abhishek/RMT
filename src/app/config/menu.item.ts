@@ -2,6 +2,11 @@ export class MenuItem {
     public menus = {
         'RM-ADMIN' :[
             {
+                'name':'Home',
+                'path':'dashboard',
+                'icon': 'fa fa-home',
+            },
+            {
                 'name':'Account',
                 'path':'',
                 'icon': 'fa fa-user',

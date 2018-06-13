@@ -5,6 +5,8 @@ import { StorageService } from './../../_services';
 import { Router } from '@angular/router';
 
 import { MenuItem } from './../../config/menu.item'
+import { hash } from './../../config/constant';
+
 import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
@@ -15,6 +17,9 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 export class SidebarComponent implements OnInit {
 
     public menus;
+
+    private hash = hash.symbol;
+    
 
     @Input()
     sidebarHeight: number;
@@ -46,7 +51,7 @@ export class SidebarComponent implements OnInit {
     public openChildrenMenu(event) {
         let target = event.currentTarget;
         let id = target.attributes.id;
-        $('#'+id.nodeValue).find('#child-menu-'+id.nodeValue).slideToggle();
+        $(this.hash+id.nodeValue).find(this.hash+'child-menu-'+id.nodeValue).slideToggle();
     }
 
 }

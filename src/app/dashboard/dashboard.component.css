@@ -1,5 +1,6 @@
 .dashboard {
     background-color: #ecf0f5;
+    padding-bottom: 60px;
 }
 .dashboard .header h2 {
     text-align: center;
@@ -16,6 +17,7 @@
     width: 200px;
     
 }
-.dashboard .application-row {
-    margin-bottom: 60px;
+
+.gapper {
+    margin-top: 60px;
 }

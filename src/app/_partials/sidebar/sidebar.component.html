@@ -1,4 +1,4 @@
-<mat-sidenav-container class="sidebar-container" [style.min-height.px] = "getSideBarHeight()">
+<!-- <mat-sidenav-container class="sidebar-container" [style.min-height.px] = "getSideBarHeight()">
     <mat-sidenav>Start</mat-sidenav>
     <mat-sidenav-content>
         <mat-nav-list>
@@ -17,23 +17,22 @@
             </mat-list-item>
         </mat-nav-list>
     </mat-sidenav-content>
-</mat-sidenav-container>
+</mat-sidenav-container> -->
 
 
 
-<!-- <section class="sidebar">
-        
+<section class="sidebar">
     <ul>
         <li>Main Navigation</li>
         <li *ngFor="let menu of menus" >
-            <a href="javascript:void(0)" (click)="openChildrenMenu($event)" id = "{{menu.name | lowercase}}">
+            <a href="{{menu.path != '' ? menu.path : 'Javascript:void(0)'}}" (click)="openChildrenMenu($event)" id = "{{menu.name | lowercase}}">
                 <i class="fa {{menu.icon}} icon-gap"></i><span>{{menu.name}}</span><span *ngIf="menu.children"><i class='fa fa-angle-left treeview-angle' ></i></span>
                 <ul id = "child-menu-{{menu.name | lowercase}}" class ="child-menu-close" *ngIf="menu.children">
-                    <li *ngFor = "let child of menu.children"><a href="{{child.path}}"><i class="fa fa-circle icon-gap"></i>{{child.name}}</a></li>
+                    <li *ngFor = "let child of menu.children"><a class= "child-link" href="{{child.path}}"><i class="fa fa-circle icon-gap"></i>{{child.name}}</a></li>
                 </ul>
             </a>
             
         </li>
         <li><a href="" (click)="onLogOut()"><i class="fa fa-sign-out icon-gap"></i>Sign Out</a></li>
     </ul>
-</section> -->
+</section>
