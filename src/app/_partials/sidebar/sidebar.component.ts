@@ -20,6 +20,7 @@ export class SidebarComponent implements OnInit {
 
     private hash = hash.symbol;
     
+    public sidebarClass = 'sidebar';
 
     @Input()
     sidebarHeight: number;
@@ -52,6 +53,11 @@ export class SidebarComponent implements OnInit {
         let target = event.currentTarget;
         let id = target.attributes.id;
         $(this.hash+id.nodeValue).find(this.hash+'child-menu-'+id.nodeValue).slideToggle();
+    }
+
+    public hideSideBar(event){
+        this.sidebarClass = 'sidebar-collapse';
+        $(".main-container").css('margin-left',0);
     }
 
 }

@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { LayoutComponent } from './layout.component';
-import { DashboardComponent } from '../dashboard/dashboard.component';
-import { AuthGuard } from '../_guards'
 
 const routes: Routes = [
     {
@@ -21,6 +19,22 @@ const routes: Routes = [
             {
                 path: 'dashboard',
                 loadChildren: '../dashboard/dashboard.module#DashboardModule'
+            },
+            {
+                path : 'user',
+                loadChildren : '../user/user.module#UserModule'
+            },
+            {
+                path : 'instance',
+                loadChildren : '../instance/instance.module#InstanceModule'
+            },
+            {
+                path : 'svn',
+                loadChildren : '../svn/svn.module#SvnModule'
+            },
+            {
+                path : 'release',
+                loadChildren : '../release/release.module#ReleaseModule'
             }
         ]
     }

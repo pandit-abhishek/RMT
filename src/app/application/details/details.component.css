@@ -1,0 +1,59 @@
+.application-header {
+    margin-bottom: 2px;
+    background-color: #1B1322;
+}
+.application-header .title-column h2 {
+    /* text-align: center; */
+    float: right;
+    /* margin-top: 12px; */
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.button-block {
+    /* margin-top: 15px; */
+    float: right;
+}
+.custom-progress-bar {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    /* border-bottom: 1px solid darkcyan; */
+}
+.custom-progress-bar img {
+    width: 250px;
+    height: auto;
+    
+}
+.expansion-header {
+    border: 1px solid lightgrey;
+}
+.gapper-app {
+    margin-top: 20px;
+}
+
+.env-details-table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.env-details-table td, .env-details-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.env-details-table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.env-details-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.env-details-table tr:hover {
+    background-color: #ddd;
+}

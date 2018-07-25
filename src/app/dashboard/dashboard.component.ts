@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+// import { trigger, state, style,transition,animate,keyframes } from '@angular/animation';
+
 
 @Component({
     selector: 'app-dashboard',
@@ -8,14 +10,28 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit  {
     test : string = 'Hello';
-    
+    // public prod = [
+    //     {
+    //         'name':'ES',
+    //         'env':'prod'
+    //     }
+    // ];
+
+    public data = 'Test Modal';
     constructor(
-        private router: Router,
+        private _router: Router,
     ) { }
 
     ngOnInit() {
         
     }
 
+    public appEnvDetails(event,item) {
+        console.log(item);
+    }
     
+    public applicationDetails(){
+        console.log('here');
+        alert('here');
+    }
 }

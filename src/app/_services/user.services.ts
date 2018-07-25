@@ -2,12 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { OnInit } from '@angular/core';
 import 'rxjs/Rx';
-import { Response } from '@angular/http';
+// import { Response } from '@angular/http';
 
-import { UserModel } from './../_models/user.model';
+// import { UserModel } from './../_models/user.model';
 import { BaseServices } from './base.services';
 import { environment } from './../../environments/environment';
 import { httpOptions } from './../config/curl';
+// import { HttpHeaders } from '@angular/common/http';
+
 
 @Injectable()
 export class UserServices extends BaseServices implements OnInit{
@@ -21,6 +23,10 @@ export class UserServices extends BaseServices implements OnInit{
 
     ngOnInit() {
         
+    }
+
+    public addNewUser(data) {
+        console.log(data);
     }
 
     public getUserById(id){
@@ -39,6 +45,8 @@ export class UserServices extends BaseServices implements OnInit{
 
     public login(username){
 
+        
+
         let body = {
             'username': username
         };
@@ -48,6 +56,8 @@ export class UserServices extends BaseServices implements OnInit{
                         .map(this.handleMap)
                         .catch(this.handleError);
     }
+    
+
     
     
 }

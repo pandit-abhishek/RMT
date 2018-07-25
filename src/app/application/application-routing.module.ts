@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { ApplicationComponent } from '../application/application.component';
 import { AddComponent } from '../application/add/add.component';
 import { ListComponent } from '../application/list/list.component';
+import { DetailsComponent } from './details/details.component';
+import { CreateComponent } from './logentry/create/create.component';
 
 const routes: Routes = [
     {
@@ -16,6 +18,14 @@ const routes: Routes = [
             {
                 path: 'list',
                 component: ListComponent
+            },
+            {
+                path: 'details/:app',
+                component: DetailsComponent
+            },
+            {
+                path: 'logentry/:app/create',
+                component: CreateComponent
             }
         ]
     }

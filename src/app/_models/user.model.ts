@@ -1,31 +1,39 @@
 export interface IUser {
     id: any;
+    userName: any;
     firstName: string;
     lastName: string;
-    username: any;
-    password:any;
-    email: any;
-    status: boolean;
-    createdAt?: Date;
+    userCategory: string;
+    userRole:string;
+    applicationAccess:any;
+    userManager:string;
+    userStatus:any;
+    enabled:any;
 }
 
 export class UserModel implements IUser {
     id: any;
+    userName: any;
     firstName: string;
     lastName: string;
-    username: any;
-    password:any;
-    email: any;
-    status: boolean;
+    userCategory: string;
+    userRole:string;
+    applicationAccess:any;
+    userManager:string;
+    userStatus:any;
+    enabled:any;
 
     constructor(user: IUser){
         this.id = user.id;
         this.firstName = user.firstName;
         this.lastName = user.lastName;
-        this.username = user.username;
-        this.password = user.password;
-        this.email = user.email;
-        this.status = user.status;
+        this.userName = user.userName;
+        this.userCategory = user.userCategory;
+        this.userRole = user.userRole;
+        this.applicationAccess = user.applicationAccess;
+        this.userManager = user.userManager;
+        this.userStatus = user.userStatus;
+        this.enabled = user.enabled;
     }
 
 }

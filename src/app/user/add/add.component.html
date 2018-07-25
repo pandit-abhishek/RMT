@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row text-header">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h2>CREATE USER</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="main-content">
+                <div class="add-user-container">
+                    <form role = "form" (submit)="addUser($event)" [formGroup]="newUserForm">
+                        <mat-form-field>
+                            <input matInput placeholder="Enter User name" formControlName="userName">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="Enter First Name" formControlName="firstName">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="Enter Last Name" formControlName="lastName">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="Enter User Category" formControlName="userCategory">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="Enter User Role" formControlName="userRole">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="Enter Application Access" formControlName="applicationAccess">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="Enter User Manager" formControlName="userManager">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="Enter User Status" formControlName="userStatus">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="Enter Enabled" formControlName="enabled">
+                        </mat-form-field>
+                        
+                        <div class="submit-button">
+                            <button class = "" mat-raised-button>Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

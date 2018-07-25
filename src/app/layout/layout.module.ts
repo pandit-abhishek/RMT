@@ -6,6 +6,7 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { HeaderComponent, FooterComponent, SidebarComponent} from './../_partials';
 import { MaterialModule } from '../material/material.module';
 
+
 @NgModule({
     imports: [
         CommonModule,

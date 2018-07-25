@@ -6,6 +6,9 @@ import { ListComponent } from './list/list.component';
 import { AddComponent } from './add/add.component';
 import { MaterialModule } from '../material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DetailsComponent } from './details/details.component';
+import { CreateComponent } from './logentry/create/create.component';
+import { MaterialComponent } from './../material/material.component';
 
 @NgModule({
     imports: [
@@ -15,6 +18,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         FormsModule,
         ReactiveFormsModule
     ],
-    declarations: [ ApplicationComponent, ListComponent, AddComponent ]
+    entryComponents:[
+       
+    ],
+    declarations: [ ApplicationComponent, ListComponent, AddComponent, DetailsComponent, CreateComponent,MaterialComponent ]
 })
 export class ApplicationModule { }

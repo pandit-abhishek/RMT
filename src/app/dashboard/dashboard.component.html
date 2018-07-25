@@ -1,46 +1,235 @@
-<div class="dashboard">
-    <div class="container">
-        <div class="row header">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <h2>RMT SERVICES</h2>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+               {{data}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
-        <div class="row application-row">
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                <a href="javascript:void(0)" (click)="appDetails()"><img src="../../assets/image/dummy.jpeg" alt="NEOS"></a>
-                <!-- <button>NEOS</button> -->
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                <img src="../../assets/image/dummy.jpeg" alt="NEOS">
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                <img src="../../assets/image/dummy.jpeg" alt="NEOS">
+    </div>
+</div>
+
+<div class="container dashboard">
+    <div class="row text-header">
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+            <h2>RMT SERVICES</h2>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+            <div class="search-box">
+                <button class="">HELP</button>
+                <input type="text" placeholder="Search..">
             </div>
         </div>
-        <div class="gapper"></div>
-        <div class="row application-row">
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                <img src="../../assets/image/dummy.jpeg" alt="NEOS">
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                <img src="../../assets/image/dummy.jpeg" alt="NEOS">
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                <img src="../../assets/image/dummy.jpeg" alt="NEOS">
+    </div>
+    <div class="gapper"></div>
+    <div class="row application-row">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 w3-container w3-center  w3-animate-zoom">
+            <div class="application-wrapper">
+                <a [routerLink]="['/application/details/es']">
+                    <div class="application-block">
+                        <img class="img-thumbnail" src="assets/images/dummy.jpeg" alt="application-images">
+                        <h6>ES</h6>
+                    </div>
+                </a>
+                
+                <div class="env-block">
+                    <div class="env prod-block">
+                        <h6><a data-toggle="modal" data-target="#exampleModal" *ngFor="let item of [{'name':'es','env':'prod'}]" href="javascript:void(0)" (click)="appEnvDetails($event,item)">PROD</a></h6>
+                    </div>
+                    <div class="env dev-block">
+                        <h6><a *ngFor="let item of [{'name':'es','env':'dev'}]" href="javascript:void(0)" (click)="appEnvDetails($event,item)">DEV</a></h6>
+                    </div>
+                    <div class="uat-block">
+                        <h6><a *ngFor="let item of [{'name':'es','env':'uat'}]" href="javascript:void(0)" (click)="appEnvDetails($event,item)">UAT</a></h6>
+                    </div>
+                </div>
+                <div class="tools-block">
+                    <h5>TOOLS</h5>
+                </div>
             </div>
         </div>
-        <div class="gapper"></div>
-        <div class="row application-row">
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                <img src="../../assets/image/dummy.jpeg" alt="NEOS">
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                <img src="../../assets/image/dummy.jpeg" alt="NEOS">
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                <img src="../../assets/image/dummy.jpeg" alt="NEOS">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 w3-container w3-center  w3-animate-zoom">
+            <div class="application-wrapper">
+                <div class="application-block">
+                    <img class="img-thumbnail" src="assets/images/dummy.jpeg" alt="application-images">
+                </div>
+                <div class="env-block">
+                    <div class="env prod-block">
+                        <h6>PROD</h6>
+                    </div>
+                    <div class="env dev-block">
+                        <h6>DEV</h6>
+                    </div>
+                    <div class="uat-block">
+                        <h6>UAT</h6>
+                    </div>
+                </div>
+                <div class="tools-block">
+                    <h5>TOOLS</h5>
+                </div>
             </div>
         </div>
-        <!-- <div class="gapper"></div> -->
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 w3-container w3-center  w3-animate-zoom">
+            <div class="application-wrapper">
+                <div class="application-block">
+                    <img class="img-thumbnail" src="assets/images/dummy.jpeg" alt="application-images">
+                </div>
+                <div class="env-block">
+                    <div class="env prod-block">
+                        <h6>PROD</h6>
+                    </div>
+                    <div class="env dev-block">
+                        <h6>DEV</h6>
+                    </div>
+                    <div class="uat-block">
+                        <h6>UAT</h6>
+                    </div>
+                </div>
+                <div class="tools-block">
+                    <h5>TOOLS</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gapper"></div>
+    <div class="row application-row">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 w3-container w3-center  w3-animate-zoom">
+            <div class="application-wrapper">
+                <div class="application-block">
+                    <img class="img-thumbnail" src="assets/images/dummy.jpeg" alt="application-images">
+                </div>
+                <div class="env-block">
+                    <div class="env prod-block">
+                        <h6>PROD</h6>
+                    </div>
+                    <div class="env dev-block">
+                        <h6>DEV</h6>
+                    </div>
+                    <div class="uat-block">
+                        <h6>UAT</h6>
+                    </div>
+                </div>
+                <div class="tools-block">
+                    <h5>TOOLS</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 w3-container w3-center  w3-animate-zoom">
+            <div class="application-wrapper">
+                <div class="application-block">
+                    <img class="img-thumbnail" src="assets/images/dummy.jpeg" alt="application-images">
+                </div>
+                <div class="env-block">
+                    <div class="env prod-block">
+                        <h6>PROD</h6>
+                    </div>
+                    <div class="env dev-block">
+                        <h6>DEV</h6>
+                    </div>
+                    <div class="uat-block">
+                        <h6>UAT</h6>
+                    </div>
+                </div>
+                <div class="tools-block">
+                    <h5>TOOLS</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 w3-container w3-center  w3-animate-zoom">
+            <div class="application-wrapper">
+                <div class="application-block">
+                    <img class="img-thumbnail" src="assets/images/dummy.jpeg" alt="application-images">
+                </div>
+                <div class="env-block">
+                    <div class="env prod-block">
+                        <h6>PROD</h6>
+                    </div>
+                    <div class="env dev-block">
+                        <h6>DEV</h6>
+                    </div>
+                    <div class="uat-block">
+                        <h6>UAT</h6>
+                    </div>
+                </div>
+                <div class="tools-block">
+                    <h5>TOOLS</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gapper"></div>
+    <div class="row application-row">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 w3-container w3-center  w3-animate-zoom">
+            <div class="application-wrapper">
+                <div class="application-block">
+                    <img class="img-thumbnail" src="assets/images/dummy.jpeg" alt="application-images">
+                </div>
+                <div class="env-block">
+                    <div class="env prod-block">
+                        <h6>PROD</h6>
+                    </div>
+                    <div class="env dev-block">
+                        <h6>DEV</h6>
+                    </div>
+                    <div class="uat-block">
+                        <h6>UAT</h6>
+                    </div>
+                </div>
+                <div class="tools-block">
+                    <h5>TOOLS</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 w3-container w3-center  w3-animate-zoom">
+            <div class="application-wrapper">
+                <div class="application-block">
+                    <img class="img-thumbnail" src="assets/images/dummy.jpeg" alt="application-images">
+                </div>
+                <div class="env-block">
+                    <div class="env prod-block">
+                        <h6>PROD</h6>
+                    </div>
+                    <div class="env dev-block">
+                        <h6>DEV</h6>
+                    </div>
+                    <div class="uat-block">
+                        <h6>UAT</h6>
+                    </div>
+                </div>
+                <div class="tools-block">
+                    <h5>TOOLS</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 w3-container w3-center  w3-animate-zoom">
+            <div class="application-wrapper">
+                <div class="application-block">
+                    <img class="img-thumbnail" src="assets/images/dummy.jpeg" alt="application-images">
+                </div>
+                <div class="env-block">
+                    <div class="env prod-block">
+                        <h6>PROD</h6>
+                    </div>
+                    <div class="env dev-block">
+                        <h6>DEV</h6>
+                    </div>
+                    <div class="uat-block">
+                        <h6>UAT</h6>
+                    </div>
+                </div>
+                <div class="tools-block">
+                    <h5>TOOLS</h5>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

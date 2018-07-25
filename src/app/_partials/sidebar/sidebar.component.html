@@ -21,18 +21,27 @@
 
 
 
-<section class="sidebar">
-    <ul>
-        <li>Main Navigation</li>
-        <li *ngFor="let menu of menus" >
-            <a href="{{menu.path != '' ? menu.path : 'Javascript:void(0)'}}" (click)="openChildrenMenu($event)" id = "{{menu.name | lowercase}}">
-                <i class="fa {{menu.icon}} icon-gap"></i><span>{{menu.name}}</span><span *ngIf="menu.children"><i class='fa fa-angle-left treeview-angle' ></i></span>
-                <ul id = "child-menu-{{menu.name | lowercase}}" class ="child-menu-close" *ngIf="menu.children">
-                    <li *ngFor = "let child of menu.children"><a class= "child-link" href="{{child.path}}"><i class="fa fa-circle icon-gap"></i>{{child.name}}</a></li>
-                </ul>
-            </a>
+<div class="col-xs-12 col-sm-3 col-md-3 col-xs-3">
+        <div class="sidebar {{sidebarClass}}">
+            <div class="top-menu">
+                <img class="center-block" src="assets/images/bvc-test.png" alt="Test">
+                <a (click)="hideSideBar($event)"><i class="fas fa-bars icon-test" ></i></a>
+                <!-- <h6>Welcome - Abhishek</h6> -->
+            </div>
             
-        </li>
-        <li><a href="" (click)="onLogOut()"><i class="fa fa-sign-out icon-gap"></i>Sign Out</a></li>
-    </ul>
-</section>
+            <ul>
+                <label>Main Navigation</label>
+                <li *ngFor="let menu of menus" >
+                    <a href="{{menu.path != '' ? menu.path : 'Javascript:void(0)'}}" (click)="openChildrenMenu($event)" id = "{{menu.name | lowercase}}">
+                        <i class="fa {{menu.icon}} icon-gap"></i><span>{{menu.name}}</span><span *ngIf="menu.children"><i class='fa fa-angle-left treeview-angle' ></i></span>
+                        <ul id = "child-menu-{{menu.name | lowercase}}" class ="child-menu-close" *ngIf="menu.children">
+                            <li *ngFor = "let child of menu.children"><a class= "child-link" href="{{child.path}}"><i class="fa fa-circle icon-gap"></i>{{child.name}}</a></li>
+                        </ul>
+                    </a>
+                    
+                </li>
+                <li><a href="" (click)="onLogOut()"><i class="fa fa-sign-out icon-gap"></i>Sign Out</a></li>
+            </ul>
+        </div>
+        
+    </div>

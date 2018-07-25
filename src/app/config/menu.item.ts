@@ -23,7 +23,7 @@ export class MenuItem {
                     },
                     {
                         'name' : 'List',
-                        'path' : 'user'
+                        'path' : 'user/list'
                     }
                 ]
             },
@@ -48,12 +48,12 @@ export class MenuItem {
                 'icon': 'fa fa-server',
                 'children' : [
                     {
-                        'name' : 'List',
-                        'path' : 'instances',
+                        'name' : 'Add',
+                        'path' : 'instance/add'
                     },
                     {
-                        'name' : 'Add',
-                        'path' : 'instances/add'
+                        'name' : 'List',
+                        'path' : 'instance/list',
                     }
                 ]
             },
@@ -63,12 +63,12 @@ export class MenuItem {
                 'icon': 'fa fa-key',
                 'children' : [
                     {
-                        'name' : 'List',
-                        'path' : 'svn',
-                    },
-                    {
                         'name' : 'Add',
                         'path' : 'svn/create'
+                    },
+                    {
+                        'name' : 'List',
+                        'path' : 'svn/list',
                     }
                 ]
             },
@@ -78,12 +78,12 @@ export class MenuItem {
                 'icon': 'fa fa-truck',
                 'children' : [
                     {
-                        'name' : 'View',
-                        'path' : 'release',
-                    },
-                    {
                         'name' : 'Add',
                         'path' : 'release/create'
+                    },
+                    {
+                        'name' : 'View',
+                        'path' : 'release/list',
                     }
                 ]
             }

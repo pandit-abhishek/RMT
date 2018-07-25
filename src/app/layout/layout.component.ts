@@ -29,7 +29,7 @@ export class LayoutComponent implements OnInit, AfterViewInit {
     }
 
     ngAfterViewInit() {
-        this.sidebarComponent.sidebarHeight =  this.dashboard.nativeElement.offsetHeight;
+        // this.sidebarComponent.sidebarHeight =  this.dashboard.nativeElement.offsetHeight;
         // console.log(this.dashboard.nativeElement.offsetHeight);
     }
 

@@ -5,5 +5,5 @@
 
 export const environment = {
     production: false,
-    API_HOST:'http://localhost:8080/RMTWebService/api'
+    API_HOST:'http://susday4270:8090/RMTWebService/api'
 };

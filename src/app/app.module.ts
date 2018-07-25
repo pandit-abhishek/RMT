@@ -1,16 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';  
 import { HttpModule } from '@angular/http';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgxSoapModule } from 'ngx-soap';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule }  from './app.routing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { LayoutModule } from './layout/layout.module';
-import { LayoutComponent } from './layout/layout.component';
-import { FormsModule } from '@angular/forms';
 import { 
     StorageService,
     UserServices,
@@ -22,8 +20,9 @@ import { AuthGuard } from './_guards'
 
 
 import { MenuItem } from './config/menu.item';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { SidebarComponent } from './_partials/sidebar/sidebar.component';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
     declarations: [
@@ -36,7 +35,8 @@ import { SidebarComponent } from './_partials/sidebar/sidebar.component';
         HttpModule,
         HttpClientModule,
         NgxSoapModule,
-        BrowserAnimationsModule,
+        BrowserAnimationsModule
+        
     ],
     providers: [
         StorageService,
@@ -44,7 +44,11 @@ import { SidebarComponent } from './_partials/sidebar/sidebar.component';
         MenuItem,
         UserServices,
         ApplicationService,
-        SidebarComponent
+        SidebarComponent,
+        { 
+            provide: LocationStrategy, 
+            useClass: HashLocationStrategy
+        }
     ],
     bootstrap: [AppComponent]
 })
