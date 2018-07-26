@@ -45,10 +45,6 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
         UserServices,
         ApplicationService,
         SidebarComponent,
-        { 
-            provide: LocationStrategy, 
-            useClass: HashLocationStrategy
-        }
     ],
     bootstrap: [AppComponent]
 })
